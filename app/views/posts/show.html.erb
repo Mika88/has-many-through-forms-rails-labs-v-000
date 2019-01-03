@@ -14,7 +14,7 @@
 
 <ul>
   <% @post.users.uniq.each do |user| %>
-    <li><%= user.username %></li>
+    <li><%= link to user.username, user %></li>
   <% end %>
 </ul>
 
