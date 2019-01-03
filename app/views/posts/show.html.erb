@@ -6,7 +6,7 @@
   <% end %>
 </ul>
 
-<%= form_for(@comment) do |f| %>
+<%= form_for(@post.comment) do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :username %>
