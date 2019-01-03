@@ -6,6 +6,12 @@
   <% end %>
 </ul>
 
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li><%= comment.content %></li>
+  <% end %>
+</ul>
+
 <%= form_for(@comment) do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content %>
