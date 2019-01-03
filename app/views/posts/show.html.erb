@@ -13,8 +13,8 @@
 </ul>
 
 <ul>
-  <% @post.users.uniq.each do |comment| %>
-    <li><%= comment.content %></li>
+  <% @post.users.uniq.each do |user| %>
+    <li><%= user.username %></li>
   <% end %>
 </ul>
 
