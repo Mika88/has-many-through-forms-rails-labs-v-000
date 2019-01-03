@@ -10,4 +10,5 @@
   <%= f.label :content %>
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :username %>
+  <%= f.submit %>
 <% end %>
