@@ -8,8 +8,9 @@
 
 <ul>
   <% @post.comments.each do |comment| %>
-  <% if comment.user %><%= comment.user.username %> says: <%= comment.content %>
+    <% if comment.user %><%= comment.user.username %> says: <%= comment.content %>
   <% end %>
+ <% end %>
 </ul>
 
 <ul>
