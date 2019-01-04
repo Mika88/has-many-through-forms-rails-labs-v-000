@@ -3,9 +3,9 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   accepts_nested_attributes_for :user, reject_if: :user == nil
 
-  def user_attributes=(user_attributes)
-    user_attributes.values.each do |user_attribute|
-      user = User.find_or_create_by(user_attribute)
-    end
-  end
+  #def user_attributes=(user_attributes)
+  #  user_attributes.values.each do |user_attribute|
+    #  user = User.find_or_create_by(user_attribute)
+  #  end
+#  end
 end
