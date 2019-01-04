@@ -18,7 +18,8 @@
   <% end %>
 </ul>
 
-<%= form_for(@comment) do |f| %>
+<%= form_for @post.comment.build do |f| %>
+  <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.label :content %>
   <%= f.text_area :content %>
   <%= f.collection_select :user_id, User.all, :id, :username, include_blank: 'Any' %>
